@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+.box {
+    width: 100%;
+    height: 80vh;
+}
+.box:nth-child(1) {
+    background: pink;
+}
+.box:nth-child(2) {
+    background: orange;
+}
+.box:nth-child(3) {
+    background: white;
+}
+.box:nth-child(4) {
+    background: lightgreen;
+}
+
+.wrapper {
+    position: fixed;
+}
+.text {
+    /* margin: 20px auto; */
+    width: fit-content;
+    font-weight: 800;
+    /* text-align: center; */
+    font-size: 180px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px black;
+
+    position: relative;
+    cursor: pointer;
+}
+
+.text span {
+    position: absolute;
+    /* content: attr(data-text); */
+    top: 0;
+    left: 0px;
+    -webkit-text-fill-color: black;
+    /* width: 0; */
+    width: 0;
+    overflow: hidden;
+}
+.text span.on {
+    width: 100%;
+}
+/* .text::before {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0px;
+    -webkit-text-fill-color: black;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.text:hover::before {
+    width: 100%;
+} */
+
+
+/* 
+.fill {
+    margin: 20px auto;
+    width: fit-content;
+    text-align: center;
+    font-size: 140px;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 1px black;
+    position: relative;
+    cursor: pointer;
+  }
+  .fill::before {
+    position: absolute;
+    content: attr(data-text);
+    top: 0;
+    left: 0px;
+    -webkit-text-fill-color: #ff5722;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .fill:hover::before {
+    width: 100%;
+  }
+   */
