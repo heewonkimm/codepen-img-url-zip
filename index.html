@@ -5,93 +5,46 @@
 	<title>Document</title>
 </head>
 <body>
+	<style>
+		.box {
+			position: relative;
+			height: 70vh;
+			background-color: lightgray;
+		}
+		.test {
+			position: absolute;
+			right: 0;
+			z-index: 50;
+		}
+		.fill-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			overflow: hidden;
+		}
+	</style>
 	
+	<div class="wrapper">
+		<div class="box"></div>
+		<div class="box test">
+			<img src="/test-stroke.png" alt="">
+			<span class="fill-box">
+				<img src="/test-fill.png" alt="">
+			</span>
+		</div>
+		<div class="box"></div>
+	</div>
 </body>
 </html>
-<style>
-	.wrapper {
-		/* position: relative; */
-	}
-	.box {
-		position: relative;
-		height: 70vh;
-		background-color: lightgray;
-	}
-	.test {
-		position: absolute;
-		right: 0;
-		z-index: 50;
-	}
-	.fill-box {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 0;
-		overflow: hidden;
-	}
-</style>
 
-<div class="wrapper">
-	<div class="box"></div>
-	<div class="box test">
-		<img src="/test-stroke.png" alt="">
-		<span class="fill-box">
-			<img src="/test-fill.png" alt="">
-		</span>
-	</div>
-	<div class="box"></div>
-</div>
-
-
-
-
-<!-- 
-    <div class="wrapper">
-        <div class="box">blank</div>
-        <div class="box">blank</div>
-        <div class="box here">
-            <p class="text">DRJART
-                <span>DRJART</span>
-            </p>
-        </div>
-        <div class="box"></div>
-    </div> -->
-
-
-<!-- 
-
-	<div class="wrapper">
-		<img src="/test-stroke.png" alt="">
-		<span class="fill-box">
-			<img src="/test-fill.png" alt="">
-		</span>
-	</div> -->
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
 <script>
 gsap.registerPlugin(ScrollTrigger);
-
-// const textBefore = document.querySelector
-
-// const beforeElement = document.querySelector('.text::before');
-// const test = document.querySelector('.text')
-
-// const textAni = gsap.timeline({scrollTrigger: {
-//         trigger:".here",
-//         start: "10% center",
-//         end: "40% center",
-//         scrub: 1,
-//         markers: true,
-//     }});
-//     textAni
-//     .addLabel('a')
-//     .to(".text", {duration: 1.5, x: '30vw'},'a')
-//     .to(".text span", {duration: 1.5, width: '100%'},'a')
-// 
-// const scrollText = document.querySelector()
-
 const fillText = gsap.timeline({scrollTrigger: {
 	trigger:".test",
 	start: "0 center",
